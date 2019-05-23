@@ -3,7 +3,12 @@ import java.util.*;
 public class algoritmo {
 
     public static int Nto1 (int n) {
-        // Sumador de N hasta 1
+        int sum = 0;
+        while (n != 0) {
+            sum += n;
+            n--;
+        }
+        return sum;
     }
 
     public static int MCD (int A, int B) {
