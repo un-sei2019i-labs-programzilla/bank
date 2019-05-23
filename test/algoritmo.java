@@ -1,4 +1,4 @@
-import java.util.*;
+﻿import java.util.*;
 
 public class algoritmo {
 
@@ -55,9 +55,27 @@ public class algoritmo {
                 r = MCM(A,B);
                 System.out.println("Resultado: " + r);
             break;
+	    case 4:
+		r = Fact();
+		System.out.println("Resultado: " + r);
+	    break;
             default:
             break;
         }
     }
+
+    public static int Fact(int n) {
+        System.out.println("Ingrese hasta que valor hacer el factorial");
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextByte();
+        int fact = 1;
+        
+        for (int i = 1; i <= n; i++){
+            fact *= i;
+        }
+        
+        return fact;
+    }
+    
 
 }
