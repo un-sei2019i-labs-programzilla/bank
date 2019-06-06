@@ -40,7 +40,7 @@ public class Database extends SQLiteOpenHelper{
         this.getWritableDatabase().insert("user", null, valores);
     }
 
-    //metodo para validar si el usuario existe
+    // Método para validar si el usuario existe
 
     public Cursor validateCredentials(String doc, String pas) throws SQLException
     {

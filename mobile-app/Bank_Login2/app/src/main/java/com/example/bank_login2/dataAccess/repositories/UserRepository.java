@@ -1,4 +1,4 @@
-package repositories;
+package com.example.bank_login2.dataAccess.repositories;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,9 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
-import dataAcces.Database;
+import com.example.bank_login2.dataAccess.database.Database;
 
-public class user {
+public class UserRepository {
 
     public static void add(Context context, int id, String name, int password){
         Database db = new Database(context, "DB1", null, 1);
@@ -35,6 +35,5 @@ public class user {
         database.close();
 
     }
-
 
 }
