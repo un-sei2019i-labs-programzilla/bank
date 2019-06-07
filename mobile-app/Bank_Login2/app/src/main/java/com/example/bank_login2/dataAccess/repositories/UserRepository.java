@@ -8,10 +8,11 @@ import com.example.bank_login2.dataAccess.models.Account;
 import com.example.bank_login2.dataAccess.models.Customer;
 
 public class UserRepository {
-    Context context;
-    Database db = new Database(context, "DB1", null, 1);
+
+
 
     public void addUser(Context context, Customer customer, Account account){
+        Database db = new Database(context, "DB1", null, 1);
         SQLiteDatabase database = db.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("ID", customer.getId());
@@ -23,13 +24,14 @@ public class UserRepository {
     }
 
     public void updateUserbyID(Context context, int id, String newName, int newPassword, int newAccountNumber ){
+        Database db = new Database(context, "DB1", null, 1);
         SQLiteDatabase database = db.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("ID", id);
         values.put("NAME", newName);
         values.put("PASSWORD", newPassword);
         values.put("ACCOUNT_NUMBER",newAccountNumber);
-        database.update("USER", values, "ID ="+id, null);
+        database.update("USER", values, "ID = "+id, null);
         database.close();
     }
 
