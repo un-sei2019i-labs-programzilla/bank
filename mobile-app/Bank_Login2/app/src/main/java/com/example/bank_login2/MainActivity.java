@@ -17,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
         UserRepository userRep = new UserRepository();
         Account newAccount = new Account(1018484010, 400000) ;
         Customer newCustomer = new Customer("JUAN", 1, newAccount, 123456);
-        userRep.updateUserbyID(this, 1, "Jorge", 123456, 1018484010);
-
+        userRep.getUSerByID(this, 1);
     }
 
 
