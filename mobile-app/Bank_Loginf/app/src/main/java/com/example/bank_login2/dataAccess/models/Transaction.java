@@ -1,6 +1,5 @@
 package com.example.bank_login2.dataAccess.models;
 
-import android.accounts.Account;
 
 import java.util.Date;
 

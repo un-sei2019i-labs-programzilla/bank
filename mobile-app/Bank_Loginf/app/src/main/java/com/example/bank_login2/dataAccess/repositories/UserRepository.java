@@ -9,7 +9,6 @@ import android.widget.Toast;
 import com.example.bank_login2.dataAccess.database.Database;
 import com.example.bank_login2.dataAccess.models.Account;
 import com.example.bank_login2.dataAccess.models.Customer;
-import com.example.bank_login2.dataAccess.models.User;
 
 public class UserRepository {
 
@@ -24,6 +23,10 @@ public class UserRepository {
         values.put("PASSWORD", customer.getPass());
         values.put("ACCOUNT_NUMBER", account.getAccNumber());
         database.insert("USER", null, values);
+        ContentValues values1 = new ContentValues();
+        values1.put("ACCOUNT_NUMBER", account.getAccNumber() );
+        values1.put("SALDO", account.getSaldo());
+        database.insert("CUENTA", null,  values1);
         database.close();
     }
 
