@@ -3,7 +3,11 @@ package com.example.bank_login2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+
+import com.example.bank_login2.dataAccess.controllers.controllerTransaction;
+import com.example.bank_login2.dataAccess.models.Account;
 
 public class menu extends AppCompatActivity {
 
@@ -18,4 +22,5 @@ public class menu extends AppCompatActivity {
         textView.setText(message);
 
     }
+
 }

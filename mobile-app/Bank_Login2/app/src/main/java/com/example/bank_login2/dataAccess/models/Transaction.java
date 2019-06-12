@@ -6,9 +6,9 @@ import java.util.Date;
 public class Transaction {
     private Date date;
     private Account sender, receiver;
-    private long amount;
+    private int amount;
 
-    public Transaction(Date date, Account sender, Account receiver, long amount) {
+    public Transaction(Date date, Account sender, Account receiver, int amount) {
         this.date = date;
         this.sender = sender;
         this.receiver = receiver;
@@ -46,7 +46,7 @@ public class Transaction {
         return amount;
     }
 
-    public void setAmount(long amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 }
